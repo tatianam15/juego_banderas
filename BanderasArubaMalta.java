@@ -28,6 +28,16 @@ public class BanderasArubaMalta {
         return bandera;
     }
 
+    public static int[][] BanderaAruba() {
+        int[][] bandera = new int[18][26];
+        bandera = PintarColumna(bandera, 0, 26, 2);
+        bandera = PintarFila(bandera, 13, 14, 4);
+        bandera = PintarFila(bandera, 15, 16, 4);
+        bandera = PintarEstrella(bandera, 1);
+
+        return bandera;
+    }
+
     public static int[][] PintarColumna(int[][] bandera, int inicio, int fin, int color) {
         for (int i = 0; i < bandera.length; i++) {
             for (int j = inicio; j < fin; j++) {
