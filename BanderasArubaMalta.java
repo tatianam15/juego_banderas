@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class BanderasArubaMalta {
 
     public static void main(String[] args) {
@@ -99,6 +101,24 @@ public class BanderasArubaMalta {
         bandera[5][3] = color;
 
         return bandera;
+    }
+
+    public static void MenuOpciones(String opciones[], String opcionCorrecta, Scanner in) {
+        System.out.println(ConsoleColors.RESET + "\n¿Qué país es?");
+
+        for (int i = 1; i < opciones.length; i++) {
+            System.out.println((i) + ". " + opciones[i]);
+        }
+
+        System.out.print("Seleccione su opción: ");
+        int opcion = in.nextInt();
+
+        if (opciones[opcion].equals(opcionCorrecta)) {
+            System.out.println("Correcto!");
+        } else {
+            System.out.println("Incorrecto");
+        }
+
     }
 }
 
