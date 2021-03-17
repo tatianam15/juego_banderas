@@ -1,9 +1,29 @@
 import java.util.Scanner;
 
 public class BanderasArubaMalta {
+    /*
+     * Variables globales
+     */
+
+    static String[] opcionesAruba = new String[] { "Aruba", "El Salvador", "Nicaragua", "Aruba", "Colombia"};//Arreglo opciones aruba, en las primeras posiciones esta la respuesta correcta 
+    static String[] opcionesMalta = new String[] { "Malta", "Polonia", "Malta", "Alemania", "Austria"}; //Arreglo opciones malta, en las primeras posiciones esta la respuesta correcta 
+    static String[][] opcionesJuego = new String[][] { opcionesAruba, opcionesMalta }; // Arreglo de los arreglos de opciones para las banderas que se tienen. 
+
+    static int[][] banderaAruba = BanderaAruba(); //Matriz, Arreglo de dos dimensiones para la bandera Aruba 
+    static int[][] otraBandera = OtraBandera(); // Matriz, arreglos de dos dimensiones para la bandera de Malta 
+    static int[][][] banderas = new int[][][] { banderaAruba, otraBandera }; // Arreglo que contiene las banderas (arreglo de matrices)
+
+    // Variable Scanner para leer entradas del usuario
+    static Scanner entrada = new Scanner(System.in);
 
     public static void main(String[] args) {
-
+        // Ciclo para recorrer las opciones de bandera que hay
+        for (int i = 0; i < opcionesJuego.length; i++) { 
+            DibujarBandera(banderas[i]);
+            MenuOpciones(opcionesJuego[i], opcionesJuego[i][0], entrada);
+          }
+  
+          entrada.close();
     }
 
     public static void DibujarBandera(int[][] bandera) {
