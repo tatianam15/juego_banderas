@@ -1,7 +1,10 @@
 public class BanderasArubaMalta {
 
-    public static void DibujarBandera(int[][] bandera) {
+    public static void main(String[] args) {
 
+    }
+
+    public static void DibujarBandera(int[][] bandera) {
         for (int i = 0; i < bandera.length; i++) {
             for (int j = 0; j < bandera[0].length; j++) {
                 if (bandera[i][j] == 1)         System.out.print(ConsoleColors.RED_BACKGROUND + " 1 ");
@@ -66,6 +69,24 @@ public class BanderasArubaMalta {
         bandera[5][2] = 1;
         bandera[5][3] = 1;
         bandera[5][4] = 1;
+
+        return bandera;
+    }
+
+    public static int[][] PintarEstrella(int[][] bandera, int color) {
+        bandera[1][3] = color;
+        bandera[2][2] = color;
+        bandera[2][3] = color;
+        bandera[2][4] = color;
+        bandera[3][1] = color;
+        bandera[3][2] = color;
+        bandera[3][3] = color;
+        bandera[3][4] = color;
+        bandera[3][5] = color;
+        bandera[4][2] = color;
+        bandera[4][3] = color;
+        bandera[4][4] = color;
+        bandera[5][3] = color;
 
         return bandera;
     }
