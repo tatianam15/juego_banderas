@@ -1,5 +1,30 @@
 public class BanderasArubaMalta {
 
+    public static void DibujarBandera(int[][] bandera) {
+
+        for (int i = 0; i < bandera.length; i++) {
+            for (int j = 0; j < bandera[0].length; j++) {
+                if (bandera[i][j] == 1)         System.out.print(ConsoleColors.RED_BACKGROUND + " 1 ");
+                else if (bandera[i][j] == 2)    System.out.print(ConsoleColors.BLUE_BACKGROUND + " 2 ");
+                else if (bandera[i][j] == 3)    System.out.print(ConsoleColors.WHITE_BACKGROUND + " 3 ");
+                else if (bandera[i][j] == 4)    System.out.print(ConsoleColors.YELLOW_BACKGROUND + " 4 ");
+            }
+            System.out.println(ConsoleColors.RESET);
+        }
+
+        System.out.println();
+    }
+
+    public static int[][] BanderaMalta() {
+
+        int[][] bandera = new int[18][26];
+        bandera = PintarColumna(bandera, 0, 13, 3);
+        bandera = PintarColumna(bandera, 13, 26, 1);
+        bandera = PintarCruz(bandera);
+
+        return bandera;
+    }
+
     public static int[][] PintarColumna(int[][] bandera, int inicio, int fin, int color) {
         for (int i = 0; i < bandera.length; i++) {
             for (int j = inicio; j < fin; j++) {
