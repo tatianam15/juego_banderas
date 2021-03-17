@@ -1,5 +1,14 @@
 public class BanderasArubaMalta {
-    
+
+    public static int[][] PintarColumna(int[][] bandera, int inicio, int fin, int color) {
+        for (int i = 0; i < bandera.length; i++) {
+            for (int j = inicio; j < fin; j++) {
+                bandera[i][j] = color;
+            }
+        }
+
+        return bandera;
+    }
 }
 
 class ConsoleColors {
