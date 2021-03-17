@@ -9,6 +9,16 @@ public class BanderasArubaMalta {
 
         return bandera;
     }
+
+    public static int[][] PintarFila(int[][] bandera, int inicio, int fin, int color) {
+        for (int i = inicio; i < fin; i++) {
+            for (int j = 0; j < bandera[0].length; j++) {
+                bandera[i][j] = color;
+            }
+        }
+
+        return bandera;
+    }
 }
 
 class ConsoleColors {
