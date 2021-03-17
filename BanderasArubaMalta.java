@@ -17,13 +17,26 @@ public class BanderasArubaMalta {
     static Scanner entrada = new Scanner(System.in);
 
     public static void main(String[] args) {
+        for (int i = 0; i < otraBandera.length; i++) {
+            if (i == 0) System.out.print("Malta");
+            System.out.print(";");
+        }
+        System.out.println();
+        for (int i = 0; i < otraBandera.length; i++) {
+            for (int j = 0; j < otraBandera[0].length; j++) {
+                if (j == 25) {System.out.print(otraBandera[i][j]);}
+                else {System.out.print(otraBandera[i][j] + ";");}
+            }
+            System.out.println();
+        }
+
         // Ciclo para recorrer las opciones de bandera que hay
-        for (int i = 0; i < opcionesJuego.length; i++) { 
-            DibujarBandera(banderas[i]);
-            MenuOpciones(opcionesJuego[i], opcionesJuego[i][0], entrada);
-          }
+        // for (int i = 0; i < opcionesJuego.length; i++) { 
+        //     DibujarBandera(banderas[i]);
+        //     MenuOpciones(opcionesJuego[i], opcionesJuego[i][0], entrada);
+        //   }
   
-          entrada.close();
+        //   entrada.close();
     }
 
     public static void DibujarBandera(int[][] bandera) {
