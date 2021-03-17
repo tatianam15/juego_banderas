@@ -10,7 +10,7 @@ public class BanderasArubaMalta {
     static String[][] opcionesJuego = new String[][] { opcionesAruba, opcionesMalta }; // Arreglo de los arreglos de opciones para las banderas que se tienen. 
 
     static int[][] banderaAruba = BanderaAruba(); //Matriz, Arreglo de dos dimensiones para la bandera Aruba 
-    static int[][] otraBandera = OtraBandera(); // Matriz, arreglos de dos dimensiones para la bandera de Malta 
+    static int[][] otraBandera = BanderaMalta(); // Matriz, arreglos de dos dimensiones para la bandera de Malta 
     static int[][][] banderas = new int[][][] { banderaAruba, otraBandera }; // Arreglo que contiene las banderas (arreglo de matrices)
 
     // Variable Scanner para leer entradas del usuario
