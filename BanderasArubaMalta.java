@@ -19,6 +19,31 @@ public class BanderasArubaMalta {
 
         return bandera;
     }
+
+    public static int[][] PintarCruz(int[][] bandera) {
+        bandera[1][2] = 1;
+        bandera[1][3] = 1;
+        bandera[1][4] = 1;
+
+        bandera[2][1] = 1;
+        bandera[2][2] = 1;
+        bandera[2][4] = 1;
+        bandera[2][5] = 1;
+
+        bandera[3][1] = 1;
+        bandera[3][5] = 1;
+
+        bandera[4][1] = 1;
+        bandera[4][2] = 1;
+        bandera[4][4] = 1;
+        bandera[4][5] = 1;
+
+        bandera[5][2] = 1;
+        bandera[5][3] = 1;
+        bandera[5][4] = 1;
+
+        return bandera;
+    }
 }
 
 class ConsoleColors {
